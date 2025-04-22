@@ -1,0 +1,102 @@
+[
+    {
+        "name": "AZ-Desert-Pic-1",
+        "image": "AZ-Pictures/AZ-Desert.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Desert-Pic-2",
+        "image": "AZ-Pictures/AZ-Desert-2.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Desert-Pic-3",
+        "image": "AZ-Pictures/AZ-Desert-3.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Desert-Pic-4",
+        "image": "/AZ-Pictures/AZ-Desert-4.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Desert-Pic-5",
+        "image": "AZ-Pictures/AZ-Desert-5.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-City-Pic-1",
+        "image": "AZ-Pictures/AZ-city.jpg",
+        "alt": "Picture of the Phoenix skyline."
+    },
+    {
+        "name": "AZ-City-Pic-2",
+        "image": "AZ-Pictures/AZ-City-2.webp",
+        "alt": "Picture of a road in Arizona with shops and some traffic."
+    },
+    {
+        "name": "AZ-City-Pic-3",
+        "image": "AZ-Pictures/AZ-City-3.jpg",
+        "alt": "Picture of a skyline in Arizona with mountains in the background."
+    },
+    {
+        "name": "AZ-City-Pic-4",
+        "image": "AZ-Pictures/AZ-City-4.webp",
+        "alt": "Picture of the Phoenix skyline."
+    },
+    {
+        "name": "AZ-City-Pic-5",
+        "image": "AZ-Pictures/AZ-City-5.jpg",
+        "alt": "Picture of the Phoenix skyline at night."
+    },
+    {
+        "name": "AZ-Live-Pic-1",
+        "image": "AZ-Pictures/AZ-Live.jpg",
+        "alt": "Picture of Arizona State University Stadium."
+    },
+    {
+        "name": "AZ-Live-Pic-2",
+        "image": "AZ-Pictures/AZ-Live-2.webp",
+        "alt": "Picture of Arizona State University Stadium in the stadium."
+    },
+    {
+        "name": "AZ-Live-Pic-3",
+        "image": "AZ-Pictures/AZ-Live-3.jpg",
+        "alt": "Picture of Arizona State University Stadium."
+    },
+    {
+        "name": "AZ-Live-Pic-4",
+        "image": "AZ-Pictures/AZ-Live-4.jpg",
+        "alt": "Picture of an Arizona Diamondbacks player hitting a home run."
+    },
+    {
+        "name": "AZ-Live-Pic-5",
+        "image": "AZ-Pictures/AZ-Live-5.png",
+        "alt": "Picture of Arizona State University Stadium."
+    },
+    {
+        "name": "AZ-Gov-Pic-1",
+        "image": "AZ-Pictures/AZ-Gov.jpg",
+        "alt": "Picture of the Arizona capital."
+    },
+    {
+        "name": "AZ-Gov-Pic-2",
+        "image": "AZ-Pictures/AZ-Gov-2.jpg",
+        "alt": "Picture of a city hall in Arizona."
+    },
+    {
+        "name": "AZ-Gov-Pic-3",
+        "image": "AZ-Pictures/AZ-Gov-3.jpg",
+        "alt": "Picture of the Maricopa County City Hall."
+    },
+    {
+        "name": "AZ-Gov-Pic-4",
+        "image": "AZ-Pictures/AZ-Gov-4.jpg",
+        "alt": "Picture of the Yuma County City Hall."
+    },
+    {
+        "name": "AZ-Gov-Pic-5",
+        "image": "AZ-Pictures/AZ-Gov-5.jpg",
+        "alt": "Picture of a city hall in Arizona."
+    }
+]

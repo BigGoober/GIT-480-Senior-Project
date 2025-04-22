@@ -1,0 +1,245 @@
+* {
+    color: white;
+}
+
+header {
+    background-color: rgb(200, 247, 255);
+    width: 102%;
+    margin-left: -8px;
+}
+
+#az-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+}
+
+#top-nav {
+    background-color: rgb(255, 255, 255);
+}
+
+#top-nav ul {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 100px;
+    margin-right: auto;
+    width: 90%;
+}
+
+#top-nav li {
+    margin-right: 150px;
+    width: 100px;
+    font-size: 18px;
+    font-family: "komet", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+#top-nav a {
+    color: rgb(7, 7, 88);
+}
+
+nav {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    justify-content: center;
+}
+
+#dropdown-icon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 100px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: rgb(54, 153, 146);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+.border-line {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(7, 7, 88);
+    display: block;
+    margin-bottom: 10px;
+    margin-top: -30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.border-line2 {
+    width: 100%;
+    height: 2px;
+    background-color: rgb(7, 7, 88);
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+video {
+    position: absolute;
+    transform: translate(50rem, 4rem);
+    border-radius: 50px;
+}
+
+.bottom-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 750px;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+#bottom-nav-disc li:first-child {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(7, 7, 88);
+}
+
+#bottom-nav-work li:first-child {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: rgb(7, 7, 88);
+}
+
+#bottom-nav-live li:first-child {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: rgb(7, 7, 88);
+}
+
+#bottom-nav-gov li:first-child {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: rgb(7, 7, 88);
+}
+
+.bottom-nav-left li {
+    font-size: 18px;
+    color: rgb(7, 7, 88);
+}
+
+.bottom-nav-left li svg {
+    translate: 0 35px;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    stroke: rgb(7, 7, 88);
+}
+
+.bottom-nav-left li div {
+    color: rgb(7, 7, 88);
+}
+
+.bottom-nav-right p {
+    font-size: 12px;
+    margin-left: 50px;
+    color: rgb(7, 7, 88);
+}
+
+.bottom-nav-right li {
+    font-size: 18px;
+    color: rgb(7, 7, 88);
+}
+
+.bottom-nav-right li svg {
+    translate: 0 35px;
+    margin-right: 10px;
+    height: 40px;
+    width: 40px;
+    stroke: rgb(7, 7, 88);
+}
+
+.bottom-nav-right li div {
+    color: rgb(7, 7, 88);
+}
+
+.bottom-nav-left p {
+    font-size: 12px;
+    margin-left: 50px;
+    color: rgb(7, 7, 88);
+}
+
+main {
+    background-color: rgb(200, 247, 255);
+    width: 101%;
+    margin-left: -1%;
+    padding-right: 1.6%;
+}
+
+main img {
+    width: 102.5%;
+    margin-left: -1%;
+    margin-top: -10.5%;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 3%;
+    padding-left: -5%;
+    width: 98%;
+}
+
+#grid section {
+    margin-right: 0;
+    padding-right: -2%;
+}
+
+#grid img {
+    width: 85%;
+    height: 330px;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px grey;
+    margin-right: 0;
+}
+
+section h2 {
+    color: white;
+    background-color: rgba(7, 7, 88, 0.6);
+    transform: translate(0, -5rem);
+    text-align: center;
+    width: 85%;
+    height: 15.3%;
+    border-radius: 1rem;
+    margin-left: -1%;
+}
+
+.required {
+    color: red;
+    font-size: 18px;
+}
+
+.hidden {
+    display: none;
+}
