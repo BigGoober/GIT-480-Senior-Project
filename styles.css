@@ -2,17 +2,28 @@
     color: white;
 }
 
-header {
+body{
+    margin: 0;
     background-color: rgb(200, 247, 255);
-    width: 102%;
-    margin-left: -8px;
 }
+
+header, main, footer{
+    width: 100%;
+    /* max-width: 1440px;  I usually limit the width of my content so it stops spreading on the page as it gets wider*/ 
+    margin: 0 auto;
+}
+
+/* header {
+    /* background-color: rgb(200, 247, 255); */
+    /* width: 102%; */
+    /* margin-left: -8px; */
 
 #az-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: -20px;
+    max-width: 500px;
 }
 
 #moon {
@@ -25,28 +36,49 @@ header {
 
 #top-nav {
     background-color: rgb(7, 7, 88);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 #top-nav ul {
     display: grid;
     position: relative;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin-left: 100px;
-    margin-right: auto;
-    width: 90%;
+    /* margin-left: 100px; */
+    /* margin-right: auto; */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #top-nav li {
-    margin-right: 150px;
-    width: 100px;
+    /* margin-right: 150px; */
+    width: fit-content;
     font-size: 18px;
     font-family: "komet", sans-serif;
     font-weight: 900;
     font-style: normal;
+    margin: 0 auto;
+}
+
+a{
+    display: block;
+    padding: 0.75rem;
 }
 
 #top-nav a {
     color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#top-nav a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(7, 7, 88);
+}
+
+#top-nav a:focus{
+    outline: 2px solid orange;                              
 }
 
 nav {
@@ -54,11 +86,21 @@ nav {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    color: rgb(7, 7, 88);
+}
+
+nav a{
+    color: rgb(7, 7, 88);
 }
 
 nav ul {
     list-style-type: none;
-    justify-content: center;
+    /* justify-content: center;  - this only works with flexbox */
+}
+
+.bottom-nav a, .bottom-nav p, .bottom-nav li, .bottom-nav div{
+
+    color: rgb(7, 7, 88);
 }
 
 #dropdown-icon {
@@ -89,7 +131,7 @@ nav ul {
     transform: translate(0, -9px) rotate(45deg);
 }
 
-.border-line {
+/* .border-line {
     width: 1450px;
     height: 2px;
     background-color: rgb(255, 255, 255);
@@ -98,9 +140,9 @@ nav ul {
     margin-top: -30px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
-.border-line2 {
+/* .border-line2 {
     width: 1450px;
     height: 2px;
     background-color: rgb(255, 255, 255);
@@ -108,7 +150,7 @@ nav ul {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 video {
     position: absolute;
@@ -125,37 +167,14 @@ video {
     padding-bottom: 5%;
 }
 
-#bottom-nav-disc li:first-child {
+#bottom-nav-disc li:first-child, #bottom-nav-work li:first-child, #bottom-nav-live li:first-child, #bottom-nav-gov li:first-child  {
     font-size: 28px;
     margin-bottom: 8px;
     font-weight: bold;
-    color: rgb(7, 7, 88);
-}
-
-#bottom-nav-work li:first-child {
-    font-size: 28px;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: rgb(7, 7, 88);
-}
-
-#bottom-nav-live li:first-child {
-    font-size: 28px;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: rgb(7, 7, 88);
-}
-
-#bottom-nav-gov li:first-child {
-    font-size: 28px;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: rgb(7, 7, 88);
 }
 
 .bottom-nav-left li {
     font-size: 18px;
-    color: rgb(7, 7, 88);
 }
 
 .bottom-nav-left li svg {
@@ -166,20 +185,14 @@ video {
     stroke: rgb(7, 7, 88);
 }
 
-.bottom-nav-left li div {
-    color: rgb(7, 7, 88);
-}
-
 .bottom-nav-right p {
     font-size: 12px;
     margin-left: 50px;
     margin-top: 2px;
-    color: rgb(7, 7, 88);
 }
 
 .bottom-nav-right li {
     font-size: 18px;
-    color: rgb(7, 7, 88);
 }
 
 .bottom-nav-right li svg {
@@ -190,117 +203,257 @@ video {
     stroke: rgb(7, 7, 88);
 }
 
-.bottom-nav-right li div {
-    color: rgb(7, 7, 88);
-}
-
 .bottom-nav-left p {
     font-size: 12px;
     margin-left: 50px;
-    margin-top: 2px;;
-    color: rgb(7, 7, 88);
+    margin-top: 2px;
 }
 
 .home-pic {
-    width: 102.5%;
+    /* width: 102.5%; */
     margin-top: -20px;
     margin-left: -8px;
+}
+
+/* .fst-pic {
+    width: 102%; */
+
+
+/* .last-pic {
+    /* width: 102.1%; */
+    /* margin-left: -10px; */
+
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Styles for the Slick Slider Carousel */
+.slick-arrow{
+    height: 3rem;
+    width: 3rem;
+}
+
+.slick-prev{
+    left: 50px;
+}
+
+.slick-next{
+    right: 50px;
+}
+
+.slick-prev::before, .slick-next::before{
+    font-size: 3rem;
     color: rgb(7, 7, 88);
+    z-index: 1000;
 }
 
-.fst-pic {
-    width: 102%;
+.slick-prev::before:hover, .slick-next::before:hover{
+/* to do */
 }
 
-.last-pic {
-    width: 102.1%;
-    margin-left: -10px;
+.slick-prev::before:focus, .slick-next::before:focus{
+    /* to do */
+}
+
+/* Styles for the responsive slides carousel */
+.slides{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+}
+
+.slides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+    }
+.slides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.slides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+}
+
+/* These need some help. The image positioning from their example isn't working on the page for the image sprites made from the "themes.gif" image. These could be replaced with arrows from somewhere else as the background image */
+.centered-btns_nav {
+    z-index: 3;
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    top: 50%;
+    left: 0;
+    opacity: 0.7;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 38px;
+    /* background: transparent url("themes.gif") no-repeat left top; */
+    /* this image is 76 by 61px */
+    background-image: url("themes.gif");
+    background-repeat: no-repeat;
+    margin-top: -45px;
+}
+
+.centered-btns_nav:active {
+    opacity: 1.0;
+}
+
+.centered-btns_nav.prev{
+    background-position: 0 30;
+}
+
+.centered-btns_nav.next {
+    left: auto;
+    /* background-position: right top; */
+    background-position: 0 -30;
+    right: 0;
+}
+
+.centered-btns_nav:focus {
+    outline: none;
+}
+    
+.centered-btns_tabs {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.centered-btns_tabs li {
+    display: inline;
+    float: none;
+    margin-right: 5px;
+}
+
+.centered-btns_tabs a {
+    text-indent: -9999px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #ccc;
+    background: rgba(0,0,0, .2);
+    display: inline-block;
+    box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+    width: 9px;
+    height: 9px;
+    padding: 0.25rem;
+}
+
+.centered-btns_here a {
+    background: #222;
+    background: rgba(0,0,0, .8);
+}
+
+#desert-pic img, #city-pic img, #live-pic img, #gov-pic img{
+    max-width: 1440px;
+    margin: 2rem auto;
+}
+
+.slides-container{
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    /* float: left; */
+    width: 100%;
+}
+
+h2{
+    font-size: 96px;
+    position: absolute;
+    z-index: 3;
+    background: rgba(7, 7, 90, 0.6);
+    padding: 0 50px;
+    font-family: "eigerdals", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    clear: both;
 }
 
 #discover-h2 {
-    font-size: 96px;
-    position: absolute;
-    transform: translate(60rem, -20rem);
-    background: rgba(7, 7, 90, 0.6);
-    padding-right: 3.63%;
-    padding-left: 50px;
+    transform: translate(59rem, -20rem);
+    /* padding-right: 3.63%; */
     border-radius: 1.5rem 0 0 1.5rem;
-    font-family: "eigerdals", sans-serif;
-    font-weight: 700;
-    font-style: normal;
 }
 
-#work-h2 {
-    font-size: 96px;
-    position: absolute;
-    transform: translate(-8px, -40rem);
-    background: rgba(7, 7, 88, 0.6);
-    padding-right: 75px;
-    padding-left: 50px;
+#work-h2, #live-h2 {
+    transform: translate(10px, -20rem);
+    /* padding-right: 75px; */
     border-radius: 0 1.5rem 1.5rem 0;
-    font-family: "eigerdals", sans-serif;
-    font-weight: 700;
-    font-style: normal;
 }
 
-#live-h2 {
-    font-size: 96px;
-    position: absolute;
+/* #live-h2 {
     transform: translate(-8px, -20rem);
-    background: rgba(7, 7, 88, 0.6);
     padding-right: 75px;
-    padding-left: 50px;
     border-radius: 0 1.5rem 1.5rem 0;
-    font-family: "eigerdals", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
+} */
 
 #government-h2 {
-    font-size: 96px;
-    position: absolute;
-    transform: translate(50rem, -42rem);
-    background-color: rgba(7, 7, 88, 0.6);
-    padding-right: 2.55%;
-    padding-left: 50px;
+    transform: translate(49rem, -20rem);
+    /* padding-right: 2.55%; */
     border-radius: 1.5rem 0 0 1.5rem;
-    font-family: "eigerdals", sans-serif;
-    font-weight: 700;
-    font-style: normal;
 }
 
-#discover {
-    background-color: rgb(200, 247, 255);
-    width: 100%;
-    margin-left: -8px;
-    padding-right: 2%;
-}
+/* #discover { */
+    /* background-color: rgb(200, 247, 255); */
+    /* width: 100%; */
+    /* margin-left: -8px; */
+    /* padding-right: 2%; */
 
-#work {
-    background-color: rgb(200, 247, 255);
-    width: 100%;
-    margin-left: -8px;
-    padding-right: 2%;
-}
+/* #work { */
+    /* background-color: rgb(200, 247, 255); */
+    /* width: 100%; */
+    /* margin-left: -8px; */
+    /* padding-right: 2%; */
 
-#live {
-    background-color: rgb(200, 247, 255);
-    width: 100%;
-    margin-left: -8px;
-    padding-right: 2%;
-}
+
+/* #live { */
+    /* background-color: rgb(200, 247, 255); */
+    /* width: 100%; */
+    /* margin-left: -8px; */
+    /* padding-right: 2%; */
+
 
 #gov-div {
-    background-color: rgb(200, 247, 255);
-    width: 100%;
+    /* background-color: rgb(200, 247, 255); */
+    /* width: 100%; */
     padding-top: 2%;
     padding-right: 2.5%;
     padding-bottom: 5%;
-    margin-left: -1%;
-    margin-top: -10px;
+    /* margin-left: -1%; */
+    /* margin-top: -10px; */
 }
 
-#discover-opt h3 {
+h3{
+    font-family: "komet", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    position: absolute;
+    font-size: 46px;
+    width: 450px;
+    height: 70px;
+    border-radius: 20px;
+    transform: translate(0, -8.1rem);
+    background-color: rgba(7, 7, 88, 0.6);
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+/* #discover-opt h3 {
     position: absolute;
     font-size: 46px;
     width: 450px;
@@ -311,27 +464,9 @@ video {
     padding-top: 10px;
     padding-left: 50px;
     margin-right: 0px;
-    font-family: "komet", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
+} */
 
-#work-opt h3 {
-    position: absolute;
-    font-size: 46px;
-    width: 450px;
-    height: 70px;
-    border-radius: 20px;
-    transform: translate(0, -8.1rem);
-    background-color: rgba(67, 7, 88, 0.6);
-    padding-top: 10px;
-    padding-left: 50px;
-    font-family: "komet", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
-
-#live-opt h3 {
+/* #work-opt h3 {
     position: absolute;
     font-size: 46px;
     width: 450px;
@@ -341,12 +476,21 @@ video {
     background-color: rgba(7, 7, 88, 0.6);
     padding-top: 10px;
     padding-left: 50px;
-    font-family: "komet", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-}
+} */
 
-#discover-opt {
+/* #live-opt h3 {
+    position: absolute;
+    font-size: 46px;
+    width: 450px;
+    height: 70px;
+    border-radius: 20px;
+    transform: translate(0, -8.1rem);
+    background-color: rgba(7, 7, 88, 0.6);
+    padding-top: 10px;
+    padding-left: 50px;
+} */
+
+#discover-opt, #work-opt, #live-opt {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 10.5%;
@@ -354,42 +498,42 @@ video {
     padding-bottom: 7.5%;
 }
 
-#work-opt {
+/* #work-opt {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 10.5%;
     margin-top: 5%;
     padding-bottom: 7.5%;
-}
+} */
 
-#live-opt {
+/* #live-opt {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 10.5%;
     margin-top: 5%;
     padding-bottom: 7.5%;
-}
+} */
 
-#discover-opt img {
+#discover-opt img, #work-opt img, #live-opt img {
     width: 500px;
     height: 300px;
     border-radius: 20px;
     box-shadow: 15px 15px 5px grey;
 }
 
-#work-opt img {
+/* #work-opt img {
     width: 500px;
     height: 300px;
     border-radius: 20px;
     box-shadow: 15px 15px 5px grey;
-}
+} */
 
-#live-opt img {
+/* #live-opt img {
     width: 500px;
     height: 300px;
     border-radius: 20px;
     box-shadow: 15px 15px 5px grey;
-}
+} */
 
 #gov-div h3 {
     width: 50%;
@@ -407,9 +551,9 @@ video {
 footer {
     background-color: rgb(54, 153, 146);
     margin-top: -20px;
-    margin-left: -1.5%;
+    /* margin-left: -1.5%;
     margin-right: -1.5%;
-    margin-bottom: -1.5%;
+    margin-bottom: -1.5%; */
     padding-top: 1%;
     padding-bottom: 1%;
 }
@@ -417,8 +561,11 @@ footer {
 footer h2 {
     text-align: center;
     font-family: "komet", sans-serif;
+    position: static;
+    background-color: transparent;
     font-weight: 900;
-    font-style: normal;
+    font-size: 3rem;
+    /* font-style: normal; */
 }
 
 footer label, input {
@@ -477,5 +624,64 @@ footer fieldset label {
 @media screen and (max-width: 320px){
     #az-logo {
         width: 40%;
+    }
+
+    #discover-opt {
+        grid-template-columns: 1fr;
+    }
+
+    #discover-opt div {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    #discover-opt img {
+        width: 260px;
+        height: 180px;
+    }
+
+    #discover-opt h3 {
+        width: 260px;
+        height: 50px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 32px;
+        text-align: center;
+    }
+
+    #work-opt {
+        grid-template-columns: 1fr;
+    }
+
+    #work-opt img {
+        width: 260px;
+        height: 180px;
+    }
+
+    #work-opt h3 {
+        width: 260px;
+        height: 50px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 38px;
+        text-align: center;
+    }
+
+    #live-opt {
+        grid-template-columns: 1fr;
+    }
+
+    #live-opt img {
+        width: 260px;
+        height: 180px;
+    }
+
+    #live-opt h3 {
+        width: 260px;
+        height: 50px;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 38px;
+        text-align: center;
     }
 }
