@@ -1,5 +1,33 @@
 $("#dropdown-icon").on("click", function(){
-    $("#dropdown-icon").classList.toggle("change");
+    $("#dropdown-icon").toggleClass("change");
+});
+
+$("#disc-a").on("click", function(){
+    $("#bottom-nav-disc").toggleClass("hidden");
+    $("#bottom-nav-work").addClass("hidden");
+    $("#bottom-nav-live").addClass("hidden");
+    $("#bottom-nav-gov").addClass("hidden");
+});
+
+$("#work-a").on("click", function(){
+    $("#bottom-nav-work").toggleClass("hidden");
+    $("#bottom-nav-disc").addClass("hidden");
+    $("#bottom-nav-live").addClass("hidden");
+    $("#bottom-nav-gov").addClass("hidden");
+});
+
+$("#live-a").on("click", function(){
+    $("#bottom-nav-live").toggleClass("hidden");
+    $("#bottom-nav-work").addClass("hidden");
+    $("#bottom-nav-disc").addClass("hidden");
+    $("#bottom-nav-gov").addClass("hidden");
+});
+
+$("#gov-a").on("click", function(){
+    $("#bottom-nav-gov").toggleClass("hidden");
+    $("#bottom-nav-work").addClass("hidden");
+    $("#bottom-nav-live").addClass("hidden");
+    $("#bottom-nav-disc").addClass("hidden");
 });
 
 // function displayPics(data){
@@ -15,10 +43,15 @@ function mediaQuery(screenWidth){
 }
 
 $("#moon").on("click", function(){
-    var all = document.getElementsByTagName("*");
-    all.classList.toggle("dark");
+    console.log("in switcher");
+    $("body").toggleClass("dark");
+    $("#top-nav").toggleClass("dark");
+    $("#top-nav button").toggleClass("dark");
+    $("#top-nav a").toggleClass("dark");
+    $("#discover-opt img, #work-opt img, #live-opt img").toggleClass("dark");
+    $("#moon").toggleClass("dark");
 
-    if($("#moon").classList.contains("dark")){
+    if($("body").hasClass("dark")){
         localStorage.setItem("displayMode", "dark");
     }else{
         localStorage.setItem("displayMode", "light");
@@ -29,7 +62,12 @@ $(function(){
     let pictures = [];
 
     if(localStorage.getItem("displayMode") == "dark"){
-        document.getElementsByTagName("*").classList.add("dark");
+        $("body").addClass("dark");
+        $("#top-nav").addClass("dark");
+        $("#top-nav button").addClass("dark");
+        $("#top-nav a").addClass("dark");
+        $("#discover-opt img, #work-opt img, #live-opt img").addClass("dark");
+        $("#moon").addClass("dark");
     }
 
     $.ajax({
@@ -39,10 +77,10 @@ $(function(){
     }).done(function(data){
         pictures = data
         console.log(pictures)
-        let cityImgArray = [pictures[5], pictures[6], pictures[7], pictures[8], pictures[9]];
-    let desertImgArray = [pictures[0], pictures[1], pictures[2], pictures[3], pictures[4]];
-    let govImgArray = [pictures[15], pictures[16], pictures[17], pictures[18], pictures[19]];
-    let liveImgArray = [pictures[10], pictures[11], pictures[12], pictures[13], pictures[14]];
+        let cityImgArray = [pictures[5].image, pictures[6].image, pictures[7].image, pictures[8].image, pictures[9].image];
+        let desertImgArray = [pictures[0].image, pictures[1].image, pictures[2].image, pictures[3].image, pictures[4].image];
+        let govImgArray = [pictures[15].image, pictures[16].image, pictures[17].image, pictures[18].image, pictures[19].image];
+        let liveImgArray = [pictures[10].image, pictures[11].image, pictures[12].image, pictures[13].image, pictures[14].image];
 
 
     $("#desert-pic").html(`
@@ -76,21 +114,31 @@ $(function(){
     <div><img src="${liveImgArray[3]}"></div>
     <div><img src="${liveImgArray[4]}"></div>
     `)
-    }).fail(function(){
-        console.log("an error has occured");
+
+    if(localStorage.getItem("displayMode") == "dark"){
+        $("body").addClass("dark");
+        $("top-nav").addClass("dark");
+    }else{
+        $("body").removeClass("dark");
+    }
+
+    $("#gov-div").accordion({
+        collapsible: true,
+        active: false
     });
 
-    
-});
-
-$("#gov-div").accordion();
-
-$('#desert-pic').slick({
+$('#desert-pic, #city-pic, #live-pic, #gov-pic').slick({
     dots: false,
     infinite: true,
     speed: 500,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    autoplay: true,
+    arrows: false
+});
+    }).fail(function(){
+        console.log("an error has occured");
+    });
 });
 
 // document.getElementById("contact-submit").addEventListener("click", function(event){

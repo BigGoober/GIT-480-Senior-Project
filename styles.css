@@ -7,9 +7,13 @@ body{
     background-color: rgb(200, 247, 255);
 }
 
+body.dark {
+    background-color: rgb(7, 7, 88);
+}
+
 header, main, footer{
     width: 100%;
-    /* max-width: 1440px;  I usually limit the width of my content so it stops spreading on the page as it gets wider*/ 
+    max-width: 1440px;  /*I usually limit the width of my content so it stops spreading on the page as it gets wider*/ 
     margin: 0 auto;
 }
 
@@ -34,10 +38,21 @@ header, main, footer{
     transform: translate(82rem, -10rem);
 }
 
+#moon.dark {
+    background-color: rgb(200, 247, 255);
+}
+
 #top-nav {
     background-color: rgb(7, 7, 88);
     border-top: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
+    transform: translate(0, -2rem)
+}
+
+#top-nav.dark {
+    background-color: rgb(200, 247, 255);
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
 }
 
 #top-nav ul {
@@ -50,6 +65,16 @@ header, main, footer{
     max-width: 1100px;
     margin: 0 auto;
     padding: 0;
+}
+
+#top-nav button {
+    background-color: rgb(7, 7, 88);
+    border: none;
+    text-decoration: none;
+}
+
+#top-nav button.dark {
+    background-color: rgb(200, 247, 255);
 }
 
 #top-nav li {
@@ -70,6 +95,11 @@ a{
 #top-nav a {
     color: rgb(255, 255, 255);
     text-align: center;
+    text-decoration: none;
+}
+
+#top-nav a.dark {
+    color: rgb(7, 7, 88);
 }
 
 #top-nav a:hover{
@@ -215,6 +245,10 @@ video {
     margin-left: -8px;
 }
 
+#desert-pic {
+    transform: translate(0, -2rem)
+}
+
 /* .fst-pic {
     width: 102%; */
 
@@ -251,7 +285,7 @@ img{
 }
 
 .slick-prev::before:hover, .slick-next::before:hover{
-/* to do */
+
 }
 
 .slick-prev::before:focus, .slick-next::before:focus{
@@ -362,6 +396,8 @@ img{
 #desert-pic img, #city-pic img, #live-pic img, #gov-pic img{
     max-width: 1440px;
     margin: 2rem auto;
+    margin-bottom: 0;
+    transform: translate(0, -5.1rem)
 }
 
 .slides-container{
@@ -385,13 +421,13 @@ h2{
 }
 
 #discover-h2 {
-    transform: translate(59rem, -20rem);
+    transform: translate(59.2rem, -26rem);
     /* padding-right: 3.63%; */
     border-radius: 1.5rem 0 0 1.5rem;
 }
 
 #work-h2, #live-h2 {
-    transform: translate(10px, -20rem);
+    transform: translate(0, -26rem);
     /* padding-right: 75px; */
     border-radius: 0 1.5rem 1.5rem 0;
 }
@@ -403,7 +439,7 @@ h2{
 } */
 
 #government-h2 {
-    transform: translate(49rem, -20rem);
+    transform: translate(49rem, -26rem);
     /* padding-right: 2.55%; */
     border-radius: 1.5rem 0 0 1.5rem;
 }
@@ -430,10 +466,14 @@ h2{
 
 #gov-div {
     /* background-color: rgb(200, 247, 255); */
-    /* width: 100%; */
-    padding-top: 2%;
+    /* width: 50%; */
+    width: 100%;
+    max-width: calc(700px - 2rem);
+    padding: 2rem 1rem;
+    margin: 64px auto 32px;
+    /* padding-top: 2%;
     padding-right: 2.5%;
-    padding-bottom: 5%;
+    padding-bottom: 5%; */
     /* margin-left: -1%; */
     /* margin-top: -10px; */
 }
@@ -447,10 +487,25 @@ h3{
     width: 450px;
     height: 70px;
     border-radius: 20px;
-    transform: translate(0, -8.1rem);
+    transform: translate(0, -7.8rem);
     background-color: rgba(7, 7, 88, 0.6);
     padding-top: 10px;
     padding-left: 50px;
+}
+
+#gov-div h3 {
+    color: white;
+    font-family: "komet", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 28px;
+}
+
+.accordion-div {
+    border-radius: 1rem;
+    border: solid orange;
+    transform: translate(0, -7.7rem);
+    box-shadow: 10px 10px 8px orange;
 }
 
 /* #discover-opt h3 {
@@ -490,12 +545,23 @@ h3{
     padding-left: 50px;
 } */
 
-#discover-opt, #work-opt, #live-opt {
+#work-opt, #live-opt {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 10.5%;
-    margin-top: 5%;
     padding-bottom: 7.5%;
+}
+
+#discover-opt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10.5%;
+    margin-top: -3%;
+    padding-bottom: 7.5%;
+}
+
+#discover-opt a {
+    padding: 0;
 }
 
 /* #work-opt {
@@ -518,7 +584,11 @@ h3{
     width: 500px;
     height: 300px;
     border-radius: 20px;
-    box-shadow: 15px 15px 5px grey;
+    box-shadow: 20px 20px 10px rgb(7, 7, 88);
+}
+
+#discover-opt img.dark, #work-opt img.dark, #live-opt img.dark {
+    box-shadow: 20px 20px 10px rgb(200, 247, 255);
 }
 
 /* #work-opt img {
@@ -536,16 +606,19 @@ h3{
 } */
 
 #gov-div h3 {
-    width: 50%;
+    /* width: 50%; */
     background-color: rgb(54, 153, 146);
     margin-top: 20px;
-    padding: 5px;
+    /* padding: 5px; */
     border: 0.2rem solid;
     border-color: black;
     border-radius: 1rem;
     box-shadow: 10px 10px 5px grey;
-    text-align: center;
-    margin-left: 25%;
+    /* text-align: center; */
+    /* margin-left: 25%; */
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    height: auto;
 }
 
 footer {
@@ -606,6 +679,18 @@ footer fieldset label {
     transform: translate(-20%, -150%);
 }
 
+#bottom-footer {
+    background-color: rgb(7, 7, 88);
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 4%;
+    transform: translate(0, 2rem);
+}
+
+#bottom-footer p {
+    transform: translate(0, 2rem);
+}
+
 #submit {
     background-color: rgb(200, 247, 255);
     color: rgb(7, 7, 88);
@@ -623,7 +708,16 @@ footer fieldset label {
 
 @media screen and (max-width: 320px){
     #az-logo {
-        width: 40%;
+        width: 50%;
+    }
+
+    #top-nav {
+        transform: translate(0, -2rem)
+    }
+
+    #top-nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     #discover-opt {
