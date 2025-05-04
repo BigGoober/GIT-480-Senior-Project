@@ -5,144 +5,154 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Griffin Hearn">
         <title>Arizona Government Site - Arizona Past</title>
+        <link rel="stylesheet" type="text/css" href="jquery-ui-1.14.1.custom/jquery-ui.min.css">
         <link rel="stylesheet" href="visiting-az.css">
+        <script src="jquery-3.6.0.min.js"></script>
+        <script src="jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+        <script src="visiting-az.js"></script>
     </head>
-    <header>
-        <h1 class="hidden">Arizona</h1>
-        <nav>
-            <h2 class="hidden">Main Navigation</h2>
-            <div id="dropdown-icon">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+    <body>
+        <header>
+            <h1 class="hidden">Arizona</h1>
+            <nav>
+                <h2 class="hidden">Main Navigation</h2>
+                <div id="dropdown-icon">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <a href="index.html"><img src="AZ-Pictures/AZ-Logo.png" alt="Arizona Logo" width="500px" id="az-logo"></a>
+                <section id="top-nav">
+                    <ul>
+                        <li><a>Discover</a></li>
+                        <li><a>Work</a></li>
+                        <li><a>Live</a></li>
+                        <li><a>Government</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </section>
+                <section id="bottom-nav-disc" class="bottom-nav hidden">
+                    <section class="bottom-nav-left">
+                        <ul>
+                            <li>Arizona Past</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-script"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 20h-11a3 3 0 0 1 0 -6h11a3 3 0 0 0 0 6h1a3 3 0 0 0 3 -3v-11a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v8" /></svg>Original Constitution</div><p>Explore Arizona's original constitution, outlining the foundational principles of the state's government and laws.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-question"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" /><path d="M19 22v.01" /><path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>Historical Census</div><p>Access historical census data to track Arizona's population growth and demographic changes over the years.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-photo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 8h.01" /><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" /><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /><path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg>Historic Photographs</div><p>View a collection of historic photographs showcasing key moments in Arizona's rich history.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-description"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 17h6" /><path d="M9 13h6" /></svg>Statehood Documents</div><p>Discover the documents that paved the way for Arizona's statehood and its path to becoming part of the Union.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-podium"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 8h14l-.621 2.485a2 2 0 0 1 -1.94 1.515h-8.878a2 2 0 0 1 -1.94 -1.515l-.621 -2.485z" /><path d="M7 8v-2a3 3 0 0 1 3 -3" /><path d="M8 12l1 9" /><path d="M16 12l-1 9" /><path d="M7 21h10" /></svg>Arizona Governors</div><p>Learn about Arizona's governors and their leadership in shaping the state's policies and development.</p></li>
+                        </ul>
+                    </section>
+                    <section class="bottom-nav-right">
+                        <ul>
+                            <li>Visiting Arizona</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-door"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 12v.01" /><path d="M3 21h18" /><path d="M6 21v-16a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v16" /></svg>Play Indoor</div><p>Find a variety of indoor activities across Arizona, from museums to sports and recreational centers.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-camper"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M15 18a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M5 18h-1a1 1 0 0 1 -1 -1v-11a2 2 0 0 1 2 -2h12a4 4 0 0 1 4 4h-18" /><path d="M9 18h6" /><path d="M19 18h1a1 1 0 0 0 1 -1v-4l-3 -5" /><path d="M21 13h-7" /><path d="M14 8v10" /></svg>Play Outdoor</div><p>Explore Arizona's vast outdoor activities, including hiking, camping, and scenic adventures in nature.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-help-square-rounded"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M12 16v.01" /><path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>Tour Arizona</div><p>Plan your visit to Arizona and explore its beautiful landscapes, historic landmarks, and vibrant cities.</p></li>
+                        </ul>
+                    </section>
+                    <video width="450" height="260" muted loop playsInLine autoPlay>
+                        <source src="Main Composition (1).mp4" type="video/mp4">
+                    </video>
+                </section>
+                <section id="bottom-nav-work" class="bottom-nav hidden">
+                    <section class="bottom-nav-left">
+                        <ul>
+                            <li>Business</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-buildings"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 21v-15c0 -1 1 -2 2 -2h5c1 0 2 1 2 2v15" /><path d="M16 8h2c1 0 2 1 2 2v11" /><path d="M3 21h18" /><path d="M10 12v0" /><path d="M10 16v0" /><path d="M10 8v0" /><path d="M7 12v0" /><path d="M7 16v0" /><path d="M7 8v0" /><path d="M17 12v0" /><path d="M17 16v0" /></svg>Business Resources</div><p>Access essential resources to start and grow your business in Arizona, including guides and support.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-dollar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M12 17v1m0 -8v1" /></svg>Manage Your Business</div><p>Discover tools and information to efficiently manage and maintain your Arizona-based business.</p></li>
+                        </ul>
+                    </section>
+                    <section class="bottom-nav-right">
+                        <ul>
+                            <li>Employment</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home-dollar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 10l-7 -7l-9 9h2v7a2 2 0 0 0 2 2h6" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2c.387 0 .748 .11 1.054 .3" /><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M19 21v1m0 -8v1" /></svg>Find Employment</div><p>Explore job opportunities and resources to help you find employment across Arizona.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-certificate"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" /><path d="M6 14m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5" /></svg>Professional Licenses</div><p>Find information on obtaining and renewing professional licenses in Arizona for various fields.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-database-dollar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" /><path d="M4 6v6c0 1.657 3.582 3 8 3c.415 0 .822 -.012 1.22 -.035" /><path d="M20 10v-4" /><path d="M4 12v6c0 1.657 3.582 3 8 3c.352 0 .698 -.009 1.037 -.025" /><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M19 21v1m0 -8v1" /></svg>Unemployment Insurance</div><p>Learn about Arizona’s unemployment insurance program and how to apply for benefits if needed.</p></li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="bottom-nav-live" class="bottom-nav hidden">
+                    <section class="bottom-nav-left">
+                        <ul>
+                            <li>Education</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-microscope"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 21h14" /><path d="M6 18h2" /><path d="M7 18v3" /><path d="M9 11l3 3l6 -6l-3 -3z" /><path d="M10.5 12.5l-1.5 1.5" /><path d="M17 3l3 3" /><path d="M12 21a6 6 0 0 0 3.715 -10.712" /></svg>Educators</div><p>Access resources and professional development for Arizona educators to enhance classroom learning.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-school"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>Learning Resources</div><p>Explore educational materials and programs for learners of all ages in Arizona.</p></li>
+                        </ul>
+                    </section>
+                    <section class="bottom-nav-right">
+                        <ul>
+                            <li>Residents</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h2.5" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" /><path d="M19 18v.01" /></svg>Citizen Resources</div><p>Access services that support Arizona residents, from healthcare to community assistance.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-first-aid-kit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 8v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M4 8m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M10 14h4" /><path d="M12 12v4" /></svg>Health & Safety</div><p>Stay informed on health guidelines, emergency preparedness, and safety resources in Arizona.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-baby-carriage"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M18 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M2 5h2.5l1.632 4.897a6 6 0 0 0 5.693 4.103h2.675a5.5 5.5 0 0 0 0 -11h-.5v6" /><path d="M6 9h14" /><path d="M9 17l1 -3" /><path d="M16 14l1 3" /></svg>Parent/Child Resources</div><p>Discover resources for Arizona families, including support for education, healthcare, and child development.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-badges"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.486 12.143l-4.486 2.69l-4.486 -2.69a1 1 0 0 0 -1.514 .857v4a1 1 0 0 0 .486 .857l5 3a1 1 0 0 0 1.028 0l5 -3a1 1 0 0 0 .486 -.857v-4a1 1 0 0 0 -1.514 -.857z" /><path d="M16.486 3.143l-4.486 2.69l-4.486 -2.69a1 1 0 0 0 -1.514 .857v4a1 1 0 0 0 .486 .857l5 3a1 1 0 0 0 1.028 0l5 -3a1 1 0 0 0 .486 -.857v-4a1 1 0 0 0 -1.514 -.857z" /></svg>Veteran Resources</div><p>Find services and benefits available to Arizona's veterans, including healthcare and employment assistance.</p></li>
+                        </ul>
+                    </section>
+                </section>
+                <section id="bottom-nav-gov" class="bottom-nav hidden">
+                    <section class="bottom-nav-left">
+                        <ul>
+                            <li>Arizona Government</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-gavel"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" /><path d="M6 9l4 4" /><path d="M13 10l-4 -4" /><path d="M3 21h7" /><path d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z" /></svg>State Government</div><p>Understand the structure and services of Arizona's state government and how it serves its residents.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-building-bank"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M3 10l18 0" /><path d="M5 6l7 -3l7 3" /><path d="M4 10l0 11" /><path d="M20 10l0 11" /><path d="M8 14l0 3" /><path d="M12 14l0 3" /><path d="M16 14l0 3" /></svg>Local Government</div><p>Learn about local government services and how they support communities across Arizona.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-flag"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0v9a5 5 0 0 1 -7 0a5 5 0 0 0 -7 0v-9z" /><path d="M5 21v-7" /></svg>Half-Staff Notices</div><p>Stay informed about flag status updates, including official half-staff notices across Arizona.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>Elected Officials</div><p>Get information on Arizona’s elected officials, their roles, and how they represent the public.</p></li>
+                        </ul>
+                    </section>
+                    <section class="bottom-nav-right">
+                        <ul>
+                            <li>Governors Office</li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-address-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" /><path d="M10 16h6" /><path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M4 8h3" /><path d="M4 12h3" /><path d="M4 16h3" /></svg>Contact Your Local Governor</div><p>Reach out to your local governor's office for support, inquiries, and engagement on state matters.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>Priorities</div><p>Stay up-to-date with Arizona's key priorities and initiatives aimed at improving the state's future.</p></li>
+                            <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-news"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" /><path d="M8 8l4 0" /><path d="M8 12l4 0" /><path d="M8 16l4 0" /></svg>Local News</div><p>Get the latest news and updates on events and issues happening in communities across Arizona.</p></li>
+                        </ul>
+                    </section>
+                </section>
+            </nav>
+        </header>
+        <main>
+            <img src="AZ-Pictures/AZ-Desert-3.jpg">
+            <h2>Arizona Past</h2>
+            <section id="grid">
+                <section>
+                    <img src="AZ-Pictures/AZ-Live-3.jpg" alt="City Hall for the Maricopa County in Arizona">
+                    <h2>Original Constitution</h2>
+                </section>
+                <section>
+                    <img src="AZ-Pictures/AZ-Residents.jpg" alt="People sitting on a cliff">
+                    <h2>Historical Census</h2>
+                </section>
+                <section>
+                    <img src="AZ-Pictures/AZ-Past.png" alt="Picture of an old car driving through the desert">
+                    <h2>Historic Photographs</h2>
+                </section>
+                <section>
+                    <img src="AZ-Pictures/AZ-Gov-5.jpg" alt="Picture of an Arizona flag and a US flag.">
+                    <h2>Statehood Documents</h2>
+                </section>
+                <section>
+                    <img src="AZ-Pictures/AZ-Gov-2.jpg" alt="Picture of a city hall">
+                    <h2>Arizona Governors</h2>
+                </section>
+                <section>
+                    <img src="AZ-Pictures/AZ-Census.jpeg" alt="Picture of historic Arizona residents">
+                    <h2>Historical Database</h2>
+                </section>
+                <section>
+                    <img src="AZ-Pictures/AZ-Historical-Society.jpeg" alt="Picture of a rock formation">
+                    <h2>Historical Society</h2>
+                </section>
+                <section>
+                    <img src="AZ-Pictures/AZ-Desert-4.jpg" alt="Picture of a desert">
+                    <h2>State Archives</h2>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <div id="bottom-footer">
+                <p>&copy;Copyright 2025</p>
+                <p>Created by Griffin Hearn</p>
             </div>
-            <a href="index.html"><img src="AZ-Pictures/AZ-Logo.png" alt="Arizona Logo" width="500px" id="az-logo"></a>
-            <section id="top-nav">
-                <div class="border-line" class="hidden"></div>
-                <ul>
-                    <li><a>Discover</a></li>
-                    <li><a>Work</a></li>
-                    <li><a>Live</a></li>
-                    <li><a>Government</a></li>
-                    <li><a>Contact Us</a></li>
-                </ul>
-                <div class="border-line2" class="hidden"></div>
-            </section>
-            <section id="bottom-nav-disc" class="bottom-nav hidden">
-                <section class="bottom-nav-left">
-                    <ul>
-                        <li>Arizona Past</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-script"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 20h-11a3 3 0 0 1 0 -6h11a3 3 0 0 0 0 6h1a3 3 0 0 0 3 -3v-11a2 2 0 0 0 -2 -2h-10a2 2 0 0 0 -2 2v8" /></svg>Original Constitution</div><p>Explore Arizona's original constitution, outlining the foundational principles of the state's government and laws.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-question"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h3.5" /><path d="M19 22v.01" /><path d="M19 19a2.003 2.003 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>Historical Census</div><p>Access historical census data to track Arizona's population growth and demographic changes over the years.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-photo"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 8h.01" /><path d="M3 6a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v12a3 3 0 0 1 -3 3h-12a3 3 0 0 1 -3 -3v-12z" /><path d="M3 16l5 -5c.928 -.893 2.072 -.893 3 0l5 5" /><path d="M14 14l1 -1c.928 -.893 2.072 -.893 3 0l3 3" /></svg>Historic Photographs</div><p>View a collection of historic photographs showcasing key moments in Arizona's rich history.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-description"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M9 17h6" /><path d="M9 13h6" /></svg>Statehood Documents</div><p>Discover the documents that paved the way for Arizona's statehood and its path to becoming part of the Union.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-podium"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 8h14l-.621 2.485a2 2 0 0 1 -1.94 1.515h-8.878a2 2 0 0 1 -1.94 -1.515l-.621 -2.485z" /><path d="M7 8v-2a3 3 0 0 1 3 -3" /><path d="M8 12l1 9" /><path d="M16 12l-1 9" /><path d="M7 21h10" /></svg>Arizona Governors</div><p>Learn about Arizona's governors and their leadership in shaping the state's policies and development.</p></li>
-                    </ul>
-                </section>
-                <section class="bottom-nav-right">
-                    <ul>
-                        <li>Visiting Arizona</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-door"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 12v.01" /><path d="M3 21h18" /><path d="M6 21v-16a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v16" /></svg>Play Indoor</div><p>Find a variety of indoor activities across Arizona, from museums to sports and recreational centers.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-camper"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 18a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M15 18a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M5 18h-1a1 1 0 0 1 -1 -1v-11a2 2 0 0 1 2 -2h12a4 4 0 0 1 4 4h-18" /><path d="M9 18h6" /><path d="M19 18h1a1 1 0 0 0 1 -1v-4l-3 -5" /><path d="M21 13h-7" /><path d="M14 8v10" /></svg>Play Outdoor</div><p>Explore Arizona's vast outdoor activities, including hiking, camping, and scenic adventures in nature.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-help-square-rounded"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" /><path d="M12 16v.01" /><path d="M12 13a2 2 0 0 0 .914 -3.782a1.98 1.98 0 0 0 -2.414 .483" /></svg>Tour Arizona</div><p>Plan your visit to Arizona and explore its beautiful landscapes, historic landmarks, and vibrant cities.</p></li>
-                    </ul>
-                </section>
-                <video width="450" height="260" muted loop playsInLine autoPlay>
-                    <source src="Main Composition (1).mp4" type="video/mp4">
-                </video>
-            </section>
-            <section id="bottom-nav-work" class="bottom-nav hidden">
-                <section class="bottom-nav-left">
-                    <ul>
-                        <li>Business</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-buildings"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 21v-15c0 -1 1 -2 2 -2h5c1 0 2 1 2 2v15" /><path d="M16 8h2c1 0 2 1 2 2v11" /><path d="M3 21h18" /><path d="M10 12v0" /><path d="M10 16v0" /><path d="M10 8v0" /><path d="M7 12v0" /><path d="M7 16v0" /><path d="M7 8v0" /><path d="M17 12v0" /><path d="M17 16v0" /></svg>Business Resources</div><p>Access essential resources to start and grow your business in Arizona, including guides and support.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-dollar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" /><path d="M14 11h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M12 17v1m0 -8v1" /></svg>Manage Your Business</div><p>Discover tools and information to efficiently manage and maintain your Arizona-based business.</p></li>
-                    </ul>
-                </section>
-                <section class="bottom-nav-right">
-                    <ul>
-                        <li>Employment</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-home-dollar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19 10l-7 -7l-9 9h2v7a2 2 0 0 0 2 2h6" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2c.387 0 .748 .11 1.054 .3" /><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M19 21v1m0 -8v1" /></svg>Find Employment</div><p>Explore job opportunities and resources to help you find employment across Arizona.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-file-certificate"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5" /><path d="M6 14m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5" /></svg>Professional Licenses</div><p>Find information on obtaining and renewing professional licenses in Arizona for various fields.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-database-dollar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3" /><path d="M4 6v6c0 1.657 3.582 3 8 3c.415 0 .822 -.012 1.22 -.035" /><path d="M20 10v-4" /><path d="M4 12v6c0 1.657 3.582 3 8 3c.352 0 .698 -.009 1.037 -.025" /><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5" /><path d="M19 21v1m0 -8v1" /></svg>Unemployment Insurance</div><p>Learn about Arizona’s unemployment insurance program and how to apply for benefits if needed.</p></li>
-                    </ul>
-                </section>
-            </section>
-            <section id="bottom-nav-live" class="bottom-nav hidden">
-                <section class="bottom-nav-left">
-                    <ul>
-                        <li>Education</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-microscope"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 21h14" /><path d="M6 18h2" /><path d="M7 18v3" /><path d="M9 11l3 3l6 -6l-3 -3z" /><path d="M10.5 12.5l-1.5 1.5" /><path d="M17 3l3 3" /><path d="M12 21a6 6 0 0 0 3.715 -10.712" /></svg>Educators</div><p>Access resources and professional development for Arizona educators to enhance classroom learning.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-school"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M22 9l-10 -4l-10 4l10 4l10 -4v6" /><path d="M6 10.6v5.4a6 3 0 0 0 12 0v-5.4" /></svg>Learning Resources</div><p>Explore educational materials and programs for learners of all ages in Arizona.</p></li>
-                    </ul>
-                </section>
-                <section class="bottom-nav-right">
-                    <ul>
-                        <li>Residents</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h2.5" /><path d="M21.121 20.121a3 3 0 1 0 -4.242 0c.418 .419 1.125 1.045 2.121 1.879c1.051 -.89 1.759 -1.516 2.121 -1.879z" /><path d="M19 18v.01" /></svg>Citizen Resources</div><p>Access services that support Arizona residents, from healthcare to community assistance.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-first-aid-kit"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 8v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /><path d="M4 8m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M10 14h4" /><path d="M12 12v4" /></svg>Health & Safety</div><p>Stay informed on health guidelines, emergency preparedness, and safety resources in Arizona.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-baby-carriage"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M18 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M2 5h2.5l1.632 4.897a6 6 0 0 0 5.693 4.103h2.675a5.5 5.5 0 0 0 0 -11h-.5v6" /><path d="M6 9h14" /><path d="M9 17l1 -3" /><path d="M16 14l1 3" /></svg>Parent/Child Resources</div><p>Discover resources for Arizona families, including support for education, healthcare, and child development.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-badges"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16.486 12.143l-4.486 2.69l-4.486 -2.69a1 1 0 0 0 -1.514 .857v4a1 1 0 0 0 .486 .857l5 3a1 1 0 0 0 1.028 0l5 -3a1 1 0 0 0 .486 -.857v-4a1 1 0 0 0 -1.514 -.857z" /><path d="M16.486 3.143l-4.486 2.69l-4.486 -2.69a1 1 0 0 0 -1.514 .857v4a1 1 0 0 0 .486 .857l5 3a1 1 0 0 0 1.028 0l5 -3a1 1 0 0 0 .486 -.857v-4a1 1 0 0 0 -1.514 -.857z" /></svg>Veteran Resources</div><p>Find services and benefits available to Arizona's veterans, including healthcare and employment assistance.</p></li>
-                    </ul>
-                </section>
-            </section>
-            <section id="bottom-nav-gov" class="bottom-nav hidden">
-                <section class="bottom-nav-left">
-                    <ul>
-                        <li>Arizona Government</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-gavel"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M13 10l7.383 7.418c.823 .82 .823 2.148 0 2.967a2.11 2.11 0 0 1 -2.976 0l-7.407 -7.385" /><path d="M6 9l4 4" /><path d="M13 10l-4 -4" /><path d="M3 21h7" /><path d="M6.793 15.793l-3.586 -3.586a1 1 0 0 1 0 -1.414l2.293 -2.293l.5 .5l3 -3l-.5 -.5l2.293 -2.293a1 1 0 0 1 1.414 0l3.586 3.586a1 1 0 0 1 0 1.414l-2.293 2.293l-.5 -.5l-3 3l.5 .5l-2.293 2.293a1 1 0 0 1 -1.414 0z" /></svg>State Government</div><p>Understand the structure and services of Arizona's state government and how it serves its residents.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-building-bank"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l18 0" /><path d="M3 10l18 0" /><path d="M5 6l7 -3l7 3" /><path d="M4 10l0 11" /><path d="M20 10l0 11" /><path d="M8 14l0 3" /><path d="M12 14l0 3" /><path d="M16 14l0 3" /></svg>Local Government</div><p>Learn about local government services and how they support communities across Arizona.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-flag"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 5a5 5 0 0 1 7 0a5 5 0 0 0 7 0v9a5 5 0 0 1 -7 0a5 5 0 0 0 -7 0v-9z" /><path d="M5 21v-7" /></svg>Half-Staff Notices</div><p>Stay informed about flag status updates, including official half-staff notices across Arizona.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>Elected Officials</div><p>Get information on Arizona’s elected officials, their roles, and how they represent the public.</p></li>
-                    </ul>
-                </section>
-                <section class="bottom-nav-right">
-                    <ul>
-                        <li>Governors Office</li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-address-book"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 6v12a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2z" /><path d="M10 16h6" /><path d="M13 11m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M4 8h3" /><path d="M4 12h3" /><path d="M4 16h3" /></svg>Contact Your Local Governor</div><p>Reach out to your local governor's office for support, inquiries, and engagement on state matters.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-exclamation-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 9v4" /><path d="M12 16v.01" /></svg>Priorities</div><p>Stay up-to-date with Arizona's key priorities and initiatives aimed at improving the state's future.</p></li>
-                        <li><div><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-news"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" /><path d="M8 8l4 0" /><path d="M8 12l4 0" /><path d="M8 16l4 0" /></svg>Local News</div><p>Get the latest news and updates on events and issues happening in communities across Arizona.</p></li>
-                    </ul>
-                </section>
-            </section>
-        </nav>
-    </header>
-    <main>
-        <img src="AZ-Pictures/AZ-Desert-3.jpg">
-        <h2>Arizona Past</h2>
-        <section id="grid">
-            <section>
-                <img src="AZ-Pictures/AZ-Live-3.jpg" alt="City Hall for the Maricopa County in Arizona">
-                <h2>Original Constitution</h2>
-            </section>
-            <section>
-                <img src="AZ-Pictures/AZ-Residents.jpg" alt="People sitting on a cliff">
-                <h2>Historical Census</h2>
-            </section>
-            <section>
-                <img src="AZ-Pictures/AZ-Past.png" alt="Picture of an old car driving through the desert">
-                <h2>Historic Photographs</h2>
-            </section>
-            <section>
-                <img src="AZ-Pictures/AZ-Gov-5.jpg" alt="Picture of an Arizona flag and a US flag.">
-                <h2>Statehood Documents</h2>
-            </section>
-            <section>
-                <img src="AZ-Pictures/AZ-Gov-2.jpg" alt="Picture of a city hall">
-                <h2>Arizona Governors</h2>
-            </section>
-            <section>
-                <img src="AZ-Pictures/AZ-Census.jpeg" alt="Picture of historic Arizona residents">
-                <h2>Historical Database</h2>
-            </section>
-            <section>
-                <img src="AZ-Pictures/AZ-Historical-Society.jpeg" alt="Picture of a rock formation">
-                <h2>Historical Society</h2>
-            </section>
-            <section>
-                <img src="AZ-Pictures/AZ-Desert-4.jpg" alt="Picture of a desert">
-                <h2>State Archives</h2>
-            </section>
-        </section>
-    </main>
+        </footer>
+    </body>
 </html>

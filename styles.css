@@ -17,6 +17,16 @@ header, main, footer{
     margin: 0 auto;
 }
 
+header {
+    position: fixed;
+    z-index: 4;
+    background-color: rgba(200, 247, 255, 0.8);
+    width: 100%;
+    max-width: 1440px;  /*I usually limit the width of my content so it stops spreading on the page as it gets wider*/ 
+    margin: 0 auto;
+    transform: translate(0, -2rem);
+}
+
 /* header {
     /* background-color: rgb(200, 247, 255); */
     /* width: 102%; */
@@ -46,7 +56,7 @@ header, main, footer{
     background-color: rgb(7, 7, 88);
     border-top: 2px solid rgb(255, 255, 255);
     border-bottom: 2px solid rgb(255, 255, 255);
-    transform: translate(0, -2rem)
+    transform: translate(0, -4rem)
 }
 
 #top-nav.dark {
@@ -117,6 +127,7 @@ nav {
     margin-left: auto;
     margin-right: auto;
     color: rgb(7, 7, 88);
+    margin-bottom: -64px;
 }
 
 nav a{
@@ -203,8 +214,16 @@ video {
     font-weight: bold;
 }
 
+#bottom-nav-disc .bottom-nav-left {
+    transform: translate(0, -1rem);
+}
+
 .bottom-nav-left li {
     font-size: 18px;
+}
+
+.bottom-nav-left a {
+    text-decoration: none;
 }
 
 .bottom-nav-left li svg {
@@ -246,7 +265,8 @@ video {
 }
 
 #desert-pic {
-    transform: translate(0, -2rem)
+    transform: translate(0, 0rem);
+    border-top: solid 2rem rgb(7, 7, 88)
 }
 
 /* .fst-pic {
@@ -397,7 +417,9 @@ img{
     max-width: 1440px;
     margin: 2rem auto;
     margin-bottom: 0;
-    transform: translate(0, -5.1rem)
+    z-index: -1;
+    transform: translate(0, -3rem);
+    border-bottom: solid 2rem rgb(7, 7, 88);
 }
 
 .slides-container{
@@ -556,7 +578,7 @@ h3{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-left: 10.5%;
-    margin-top: -3%;
+    margin-top: 0;
     padding-bottom: 7.5%;
 }
 
@@ -707,17 +729,99 @@ footer fieldset label {
 }
 
 @media screen and (max-width: 320px){
+    header {
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(200, 247, 255, 0.8);
+        width: 100%;
+        max-width: 1440px;  /*I usually limit the width of my content so it stops spreading on the page as it gets wider*/ 
+        margin: 0 auto;
+        transform: translate(0, 0rem);
+        padding-bottom: 60px;
+    }
+
+    main {
+        transform: translate(0, -2rem);
+    }
+
+    #top-header {
+        height: 75px;
+    }
+
+    #city-pic, #live-pic, #gov-pic {
+        transform: translate(0, 3.2rem);
+    }
+
+    #desert-pic {
+        transform: translate(0, 2rem);
+    }
+
+    #bottom-nav-disc{
+        display: none;
+    }
+    #bottom-nav-work{
+        display: none;
+    }
+    #bottom-nav-live{
+        display: none;
+    }
+    #bottom-nav-gov{
+        display: none;
+    }
+
+    video {
+        display: none;
+    }
+
     #az-logo {
-        width: 50%;
+        width: 60%;
+    }
+
+    #dropdown-icon {
+        transform: translate(0, -5.3rem);
     }
 
     #top-nav {
-        transform: translate(0, -2rem)
+        transform: translate(0, 0rem)
     }
 
     #top-nav ul {
         display: grid;
         grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 48px;
+        position: absolute;
+        z-index: 3;
+        background: rgba(7, 7, 90, 0.6);
+        padding: 0 20px;
+        font-family: "eigerdals", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        clear: both;
+    }
+
+    #discover-h2 {
+        transform: translate(5.3rem, -10rem);
+        /* padding-right: 3.63%; */
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+    
+    #live-h2 {
+        transform: translate(0, -22rem);
+        /* padding-right: 75px; */
+        border-radius: 0 1.5rem 1.5rem 0;
+    }
+
+    #work-h2 {
+        transform: translate(0, -12rem)
+    }
+
+    #government-h2 {
+        transform: translate(0rem, -26rem);
+        /* padding-right: 2.55%; */
+        border-radius: 1.5rem 0 0 1.5rem;
     }
 
     #discover-opt {
@@ -734,6 +838,10 @@ footer fieldset label {
         height: 180px;
     }
 
+    h3 {
+        transform: translate(0, -6.1rem);
+    }
+
     #discover-opt h3 {
         width: 260px;
         height: 50px;
@@ -741,10 +849,16 @@ footer fieldset label {
         padding-right: 0;
         font-size: 32px;
         text-align: center;
+        transform: translate(0, -5.7rem)
+    }
+
+    #discover-opt div {
+        margin-top: 2rem;
     }
 
     #work-opt {
         grid-template-columns: 1fr;
+        margin-top: 2rem;
     }
 
     #work-opt img {
@@ -761,8 +875,13 @@ footer fieldset label {
         text-align: center;
     }
 
+    #work-opt div {
+        margin-top: 2rem;
+    }
+
     #live-opt {
         grid-template-columns: 1fr;
+        margin-top: 2rem;
     }
 
     #live-opt img {
@@ -777,5 +896,27 @@ footer fieldset label {
         padding-right: 0;
         font-size: 38px;
         text-align: center;
+    }
+
+    #live-opt div {
+        margin-top: 2rem;
+    }
+
+    #gov-div {
+        width: 75%;
+        transform: translate(0, 2rem);
+    }
+
+    #gov-div div {
+        transform: translate(0, -6rem);
+    }
+
+    footer fieldset {
+        width: 60%;
+        margin-left: 18%;
+    }
+
+    fieldset label {
+        margin-right: 3rem;
     }
 }

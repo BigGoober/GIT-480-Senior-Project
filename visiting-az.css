@@ -3,9 +3,13 @@
 }
 
 header {
-    background-color: rgb(200, 247, 255);
+    background-color: rgba(200, 247, 255, 0.75);
     width: 102%;
     margin-left: -8px;
+    padding-bottom: -8px;
+    position: fixed;
+    z-index: 2;
+    transform: translate(0, -6rem);
 }
 
 #az-logo {
@@ -13,33 +17,38 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: -20px;
+    transform: translate(0, 4rem);
 }
 
 #top-nav {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(7, 7, 88);
+    transform: translate(0, 0rem);
+    height: 50px;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
 }
 
 #top-nav ul {
     display: grid;
     position: relative;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    margin-left: 100px;
+    margin-left: 300px;
     margin-right: auto;
-    width: 90%;
+    width: 60%;
 }
 
 #top-nav li {
     margin-right: 150px;
-    width: 100px;
+    width: 100%;
     font-size: 18px;
     font-family: "komet", sans-serif;
     font-weight: 900;
     font-style: normal;
-    color: rgb(255, 255, 255);
 }
 
 #top-nav a {
-    color: rgb(7, 7, 88);
+    color: white;
+    font-size: 14px;
 }
 
 nav {
@@ -47,7 +56,7 @@ nav {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 20px;
+    padding-left: -10%;
 }
 
 nav ul {
@@ -60,7 +69,7 @@ nav ul {
     cursor: pointer;
     position: absolute;
     margin-left: 5%;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -242,4 +251,69 @@ section h2 {
 
 .hidden {
     display: none;
+}
+
+#bottom-footer{
+    background-color: rgb(7, 7, 88);
+    width: 102.5%;
+    margin-left: -1%;
+    height: 100px;
+    margin-bottom: -2%;
+    margin-top: -2%;
+    text-align: center;
+}
+
+@media screen and (max-width: 320px){
+    header {
+        position: fixed;
+        z-index: 2;
+        background-color: rgba(200, 247, 255, 0.8);
+        width: 100%;
+        max-width: 320px;  /*I usually limit the width of my content so it stops spreading on the page as it gets wider*/ 
+        margin: 0 auto;
+        transform: translate(-0.6rem, 0);
+        padding-bottom: 60px;
+    }
+
+    main {
+        transform: translate(0, -2rem);
+    }
+
+    #top-header {
+        height: 75px;
+    }
+
+    #bottom-nav-disc{
+        display: none;
+    }
+    #bottom-nav-work{
+        display: none;
+    }
+    #bottom-nav-live{
+        display: none;
+    }
+    #bottom-nav-gov{
+        display: none;
+    }
+
+    video {
+        display: none;
+    }
+
+    #az-logo {
+        width: 60%;
+    }
+
+    #dropdown-icon {
+        transform: translate(0, -5.3rem);
+    }
+
+    #top-nav {
+        transform: translate(0, 0rem)
+    }
+
+    #top-nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }

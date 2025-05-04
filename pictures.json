@@ -98,5 +98,105 @@
         "name": "AZ-Gov-Pic-5",
         "image": "AZ-Pictures/AZ-Gov-5.jpg",
         "alt": "Picture of a city hall in Arizona."
+    },
+    {
+        "name": "AZ-Desert-Pic-1-mobile",
+        "image": "AZ-Pictures/AZ-Desert-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Desert-Pic-2-mobile",
+        "image": "AZ-Pictures/AZ-Desert-2-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Desert-Pic-3-mobile",
+        "image": "AZ-Pictures/AZ-Desert-3-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Desert-Pic-4-mobile",
+        "image": "/AZ-Pictures/AZ-Desert-4-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Desert-Pic-5-mobile",
+        "image": "AZ-Pictures/AZ-Desert-5-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-City-Pic-1-mobile",
+        "image": "AZ-Pictures/AZ-City-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-City-Pic-2-mobile",
+        "image": "AZ-Pictures/AZ-City-2-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-City-Pic-3-mobile",
+        "image": "AZ-Pictures/AZ-City-3-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-City-Pic-4-mobile",
+        "image": "/AZ-Pictures/AZ-City-4-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-City-Pic-5-mobile",
+        "image": "AZ-Pictures/AZ-City-5-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Live-Pic-1-mobile",
+        "image": "AZ-Pictures/AZ-Live-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Live-Pic-2-mobile",
+        "image": "AZ-Pictures/AZ-Live-2-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Live-Pic-3-mobile",
+        "image": "AZ-Pictures/AZ-Live-3-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Live-Pic-4-mobile",
+        "image": "/AZ-Pictures/AZ-Livet-4-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Live-Pic-5-mobile",
+        "image": "AZ-Pictures/AZ-Live-5-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Gov-Pic-1-mobile",
+        "image": "AZ-Pictures/AZ-Gov-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Gov-Pic-2-mobile",
+        "image": "AZ-Pictures/AZ-Gov-2-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Gov-Pic-3-mobile",
+        "image": "AZ-Pictures/AZ-Gov-3-mobile.jpg",
+        "alt": "Picture of the Arizona desert with a sunset in the background."
+    },
+    {
+        "name": "AZ-Gov-Pic-4-mobile",
+        "image": "/AZ-Pictures/AZ-Gov-4-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
+    },
+    {
+        "name": "AZ-Gov-Pic-5-mobile",
+        "image": "AZ-Pictures/AZ-Gov-5-mobile.jpg",
+        "alt": "Picture of the Arizona desert."
     }
 ]

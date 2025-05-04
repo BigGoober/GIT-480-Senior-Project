@@ -1,5 +1,10 @@
 $("#dropdown-icon").on("click", function(){
     $("#dropdown-icon").toggleClass("change");
+    $("#top-nav").toggleClass("hidden");
+    $("#bottom-nav-disc").addClass("hidden");
+    $("#bottom-nav-work").addClass("hidden");
+    $("#bottom-nav-live").addClass("hidden");
+    $("#bottom-nav-gov").addClass("hidden");
 });
 
 $("#disc-a").on("click", function(){
@@ -29,18 +34,6 @@ $("#gov-a").on("click", function(){
     $("#bottom-nav-live").addClass("hidden");
     $("#bottom-nav-disc").addClass("hidden");
 });
-
-// function displayPics(data){
-
-// }
-
-var screenWidth = window.matchMedia("(max-width: 320px)")
-
-function mediaQuery(screenWidth){
-    if(screenWidth.matches){
-        $("#top-nav").addClass("hidden");
-    }
-}
 
 $("#moon").on("click", function(){
     console.log("in switcher");
@@ -78,42 +71,129 @@ $(function(){
         pictures = data
         console.log(pictures)
         let cityImgArray = [pictures[5].image, pictures[6].image, pictures[7].image, pictures[8].image, pictures[9].image];
+        let cityImgArrayMobile = [pictures[25].image, pictures[26].image, pictures[27].image, pictures[28].image, pictures[29].image];
         let desertImgArray = [pictures[0].image, pictures[1].image, pictures[2].image, pictures[3].image, pictures[4].image];
+        let desertImgArrayMobile = [pictures[20].image, pictures[21].image, pictures[22].image, pictures[23].image, pictures[24].image];
         let govImgArray = [pictures[15].image, pictures[16].image, pictures[17].image, pictures[18].image, pictures[19].image];
+        let govImgArrayMobile = [pictures[35].image, pictures[36].image, pictures[37].image, pictures[38].image, pictures[39].image];
         let liveImgArray = [pictures[10].image, pictures[11].image, pictures[12].image, pictures[13].image, pictures[14].image];
+        let liveImgArrayMobile = [pictures[30].image, pictures[31].image, pictures[32].image, pictures[33].image, pictures[34].image];
 
 
-    $("#desert-pic").html(`
-    <div><img src="${desertImgArray[0]}"></div>
-    <div><img src="${desertImgArray[1]}"></div>
-    <div><img src="${desertImgArray[2]}"></div>
-    <div><img src="${desertImgArray[3]}"></div>
-    <div><img src="${desertImgArray[4]}"></div>
-    `)
+        $("#desert-pic").html(`
+        <div><img src="${desertImgArray[0]}"></div>
+        <div><img src="${desertImgArray[1]}"></div>
+        <div><img src="${desertImgArray[2]}"></div>
+        <div><img src="${desertImgArray[3]}"></div>
+        <div><img src="${desertImgArray[4]}"></div>
+        `)
 
-    $("#city-pic").html(`
-    <div><img src="${cityImgArray[0]}"></div>
-    <div><img src="${cityImgArray[1]}"></div>
-    <div><img src="${cityImgArray[2]}"></div>
-    <div><img src="${cityImgArray[3]}"></div>
-    <div><img src="${cityImgArray[4]}"></div>
-    `)
+        $("#city-pic").html(`
+        <div><img src="${cityImgArray[0]}"></div>
+        <div><img src="${cityImgArray[1]}"></div>
+        <div><img src="${cityImgArray[2]}"></div>
+        <div><img src="${cityImgArray[3]}"></div>
+        <div><img src="${cityImgArray[4]}"></div>
+        `)
 
-    $("#gov-pic").html(`
-    <div><img src="${govImgArray[0]}"></div>
-    <div><img src="${govImgArray[1]}"></div>
-    <div><img src="${govImgArray[2]}"></div>
-    <div><img src="${govImgArray[3]}"></div>
-    <div><img src="${govImgArray[4]}"></div>
-    `)
+        $("#gov-pic").html(`
+        <div><img src="${govImgArray[0]}"></div>
+        <div><img src="${govImgArray[1]}"></div>
+        <div><img src="${govImgArray[2]}"></div>
+        <div><img src="${govImgArray[3]}"></div>
+        <div><img src="${govImgArray[4]}"></div>
+        `)
 
-    $("#live-pic").html(`
-    <div><img src="${liveImgArray[0]}"></div>
-    <div><img src="${liveImgArray[1]}"></div>
-    <div><img src="${liveImgArray[2]}"></div>
-    <div><img src="${liveImgArray[3]}"></div>
-    <div><img src="${liveImgArray[4]}"></div>
-    `)
+        $("#live-pic").html(`
+        <div><img src="${liveImgArray[0]}"></div>
+        <div><img src="${liveImgArray[1]}"></div>
+        <div><img src="${liveImgArray[2]}"></div>
+        <div><img src="${liveImgArray[3]}"></div>
+        <div><img src="${liveImgArray[4]}"></div>
+        `)
+
+    var screenWidth = window.matchMedia("(max-width: 320px)")
+
+    screenWidth.addEventListener("change", function(screenWidth){
+        if(screenWidth.matches){
+            if(screenWidth.matches){
+                $("#top-nav").addClass("hidden");
+                $("#bottom-nav-disc").addClass("hidden");
+                // $("#desert-pic").remove();
+                // $("#city-pic").remove();
+                // $("#gov-pic").remove();
+                // $("#live-pic").remove();
+
+                $("#desert-pic").html(`
+                <div><img src="${desertImgArrayMobile[0]}"></div>
+                `)
+
+                // <div><img src="${desertImgArrayMobile[1]}"></div>
+                // <div><img src="${desertImgArrayMobile[2]}"></div>
+                // <div><img src="${desertImgArrayMobile[3]}"></div>
+                // <div><img src="${desertImgArrayMobile[4]}"></div>
+
+                $("#city-pic").html(`
+                <div><img src="${cityImgArrayMobile[0]}"></div>
+                `)
+
+                // <div><img src="${cityImgArrayMobile[1]}"></div>
+                // <div><img src="${cityImgArrayMobile[2]}"></div>
+                // <div><img src="${cityImgArrayMobile[3]}"></div>
+                // <div><img src="${cityImgArrayMobile[4]}"></div>
+
+                $("#gov-pic").html(`
+                <div><img src="${govImgArrayMobile[0]}"></div>
+                `)
+
+                // <div><img src="${govImgArrayMobile[1]}"></div>
+                // <div><img src="${govImgArrayMobile[2]}"></div>
+                // <div><img src="${govImgArrayMobile[3]}"></div>
+                // <div><img src="${govImgArrayMobile[4]}"></div>
+
+                $("#live-pic").html(`
+                <div><img src="${liveImgArrayMobile[2]}"></div>
+                `)
+
+                // <div><img src="${liveImgArrayMobile[1]}"></div>
+                // <div><img src="${liveImgArrayMobile[2]}"></div>
+                // <div><img src="${liveImgArrayMobile[3]}"></div>
+                // <div><img src="${liveImgArrayMobile[4]}"></div>
+            }else{
+                $("#desert-pic").html(`
+                <div><img src="${desertImgArray[0]}"></div>
+                <div><img src="${desertImgArray[1]}"></div>
+                <div><img src="${desertImgArray[2]}"></div>
+                <div><img src="${desertImgArray[3]}"></div>
+                <div><img src="${desertImgArray[4]}"></div>
+                `)
+
+                $("#city-pic").html(`
+                <div><img src="${cityImgArray[0]}"></div>
+                <div><img src="${cityImgArray[1]}"></div>
+                <div><img src="${cityImgArray[2]}"></div>
+                <div><img src="${cityImgArray[3]}"></div>
+                <div><img src="${cityImgArray[4]}"></div>
+                `)
+
+                $("#gov-pic").html(`
+                <div><img src="${govImgArray[0]}"></div>
+                <div><img src="${govImgArray[1]}"></div>
+                <div><img src="${govImgArray[2]}"></div>
+                <div><img src="${govImgArray[3]}"></div>
+                <div><img src="${govImgArray[4]}"></div>
+                `)
+
+                $("#live-pic").html(`
+                <div><img src="${liveImgArray[0]}"></div>
+                <div><img src="${liveImgArray[1]}"></div>
+                <div><img src="${liveImgArray[2]}"></div>
+                <div><img src="${liveImgArray[3]}"></div>
+                <div><img src="${liveImgArray[4]}"></div>
+                `)
+            }
+        }
+    });
 
     if(localStorage.getItem("displayMode") == "dark"){
         $("body").addClass("dark");
@@ -122,24 +202,25 @@ $(function(){
         $("body").removeClass("dark");
     }
 
+    $('#desert-pic, #city-pic, #live-pic, #gov-pic').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
+        fade: true,
+        cssEase: 'linear',
+        autoplay: true,
+        arrows: false
+    });
+        }).fail(function(){
+            console.log("an error has occured");
+        });
+    });
+
     $("#gov-div").accordion({
         collapsible: true,
         active: false
     });
 
-$('#desert-pic, #city-pic, #live-pic, #gov-pic').slick({
-    dots: false,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    autoplay: true,
-    arrows: false
-});
-    }).fail(function(){
-        console.log("an error has occured");
-    });
-});
 
 // document.getElementById("contact-submit").addEventListener("click", function(event){
 //     event.preventDefault();
