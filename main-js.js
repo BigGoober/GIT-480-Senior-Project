@@ -134,7 +134,7 @@ $(function(){
                 // <div><img src="${desertImgArrayMobile[4]}"></div>
 
                 $("#city-pic").html(`
-                <div><img src="${cityImgArrayMobile[0]}"></div>
+                <div><img src="${cityImgArrayMobile[1]}"></div>
                 `)
 
                 // <div><img src="${cityImgArrayMobile[1]}"></div>
