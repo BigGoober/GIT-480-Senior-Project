@@ -1,3 +1,5 @@
-document.getElementById("dropdown-icon").addEventListener("click", function(){
-    document.getElementById("")
+var screenWidth = window.matchMedia("(max-width: 320px)")
+
+screenWidth.addEventListener("change", function(screenWidth){
+    
 })
