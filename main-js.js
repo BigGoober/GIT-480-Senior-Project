@@ -71,7 +71,7 @@ $(function(){
         pictures = data
         console.log(pictures)
         let cityImgArray = [pictures[5].image, pictures[6].image, pictures[7].image, pictures[8].image, pictures[9].image];
-        let cityImgArrayMobile = [pictures[25].image, pictures[26].image, pictures[27].image, pictures[28].image, pictures[29].image];
+        // let cityImgArrayMobile = [pictures[25].image, pictures[26].image, pictures[27].image, pictures[28].image, pictures[29].image];
         let desertImgArray = [pictures[0].image, pictures[1].image, pictures[2].image, pictures[3].image, pictures[4].image];
         let desertImgArrayMobile = [pictures[20].image, pictures[21].image, pictures[22].image, pictures[23].image, pictures[24].image];
         let govImgArray = [pictures[15].image, pictures[16].image, pictures[17].image, pictures[18].image, pictures[19].image];
@@ -84,7 +84,6 @@ $(function(){
         <div><img src="${desertImgArray[0]}"></div>
         <div><img src="${desertImgArray[1]}"></div>
         <div><img src="${desertImgArray[2]}"></div>
-        <div><img src="AZ-Pictures/AZ-Desert-4.jpg"></div>
         <div><img src="${desertImgArray[4]}"></div>
         `)
 
