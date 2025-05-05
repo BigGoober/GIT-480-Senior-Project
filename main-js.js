@@ -84,7 +84,7 @@ $(function(){
         <div><img src="${desertImgArray[0]}"></div>
         <div><img src="${desertImgArray[1]}"></div>
         <div><img src="${desertImgArray[2]}"></div>
-        <div><img src="${desertImgArray[3]}"></div>
+        <div><img src="AZ-Pictures/AZ-Desert-4.jpg"></div>
         <div><img src="${desertImgArray[4]}"></div>
         `)
 
